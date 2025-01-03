@@ -19,7 +19,13 @@ class QuranHome extends StatefulWidget {
 
 class _QuranHomeState extends State<QuranHome> {
   int selectedIndex = 0;
-  var pages = const [Quran(), Hadeth(), Sebha(), Times(), RadioScreen()];
+  var pages = const [
+    Quran(),
+    Hadeth(),
+    Sebha(),
+    Times(),
+    RadioScreen(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -62,10 +68,11 @@ class _QuranHomeState extends State<QuranHome> {
             icon: Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
-                  color: (selectedIndex == 2)
-                      ? AppColors.secondaryColor.withOpacity(0.5)
-                      : Colors.transparent,
-                  borderRadius: BorderRadius.circular(66)),
+                color: (selectedIndex == 2)
+                    ? AppColors.secondaryColor.withOpacity(0.5)
+                    : Colors.transparent,
+                borderRadius: BorderRadius.circular(66),
+              ),
               child: const ImageIcon(
                 AssetImage(AppAssets.sebhaICN),
               ),
@@ -76,10 +83,11 @@ class _QuranHomeState extends State<QuranHome> {
             icon: Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
-                  color: (selectedIndex == 3)
-                      ? AppColors.secondaryColor.withOpacity(0.5)
-                      : Colors.transparent,
-                  borderRadius: BorderRadius.circular(66)),
+                color: (selectedIndex == 3)
+                    ? AppColors.secondaryColor.withOpacity(0.5)
+                    : Colors.transparent,
+                borderRadius: BorderRadius.circular(66),
+              ),
               child: const ImageIcon(
                 AssetImage(AppAssets.radioICN),
               ),
@@ -90,10 +98,11 @@ class _QuranHomeState extends State<QuranHome> {
             icon: Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
-                  color: (selectedIndex == 4)
-                      ? AppColors.secondaryColor.withOpacity(0.5)
-                      : Colors.transparent,
-                  borderRadius: BorderRadius.circular(66)),
+                color: (selectedIndex == 4)
+                    ? AppColors.secondaryColor.withOpacity(0.5)
+                    : Colors.transparent,
+                borderRadius: BorderRadius.circular(66),
+              ),
               child: const ImageIcon(
                 AssetImage(AppAssets.timesICN),
               ),
