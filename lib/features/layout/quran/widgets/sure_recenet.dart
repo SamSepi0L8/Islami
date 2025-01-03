@@ -20,49 +20,54 @@ class RecentSura extends StatelessWidget {
       decoration: BoxDecoration(
           color: AppColors.primaryColor,
           borderRadius: BorderRadius.circular(22)),
-      child: Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Expanded(
-                  child: Text(
-                    nameEnglish,
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
+      child: GestureDetector(
+        onTap: () {
+          print("Clicked");
+        },
+        child: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Expanded(
+                    child: Text(
+                      nameEnglish,
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ),
-                Expanded(
-                  child: Text(
-                    nameArabic,
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
+                  Expanded(
+                    child: Text(
+                      nameArabic,
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ),
-                Expanded(
-                  child: Text(
-                    "${versesNumber} verse",
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
+                  Expanded(
+                    child: Text(
+                      "${versesNumber} verse",
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          Image.asset(AppAssets.recentIMG)
-        ],
+            Image.asset(AppAssets.recentIMG)
+          ],
+        ),
       ),
     );
   }
